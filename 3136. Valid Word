@@ -1,0 +1,18 @@
+class Solution:
+    def isValid(self, word: str) -> bool:
+        l=len(word)
+        if l<3:
+            return False
+        else:
+            v='aeiouAEIOU'
+            vt=any(char in v for char in word)
+            c='bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
+            ct=any(char in c for char in word)
+            valid='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+            validtrue=any(char in valid for char in word)
+            special='@#$'
+            specialtrue=all(char not in special for char in word)
+            return vt and ct and validtrue and specialtrue
+            
+                
+        
