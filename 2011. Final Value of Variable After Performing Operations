@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int finalValueAfterOperations(vector<string>& operations) 
+    {
+       int a=0;
+       for(string op:operations)
+       {
+         if (op=="++X" || op=="X++")
+         {
+            a++;
+         }
+         else
+         {
+            a--;
+         }
+       } 
+       return a;   
+    }
+};
