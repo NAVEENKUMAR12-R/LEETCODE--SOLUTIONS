@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int thirdMax(vector<int>& nums) 
+    { 
+        set<int>s(nums.begin(),nums.end());
+        vector<int>a(s.begin(),s.end());
+      int l=a.size();
+
+      if(l<3)
+      {
+        int m=*max_element(a.begin(),a.end());
+        return m;
+      }   
+      else
+      {
+         sort(a.begin(),a.end(),greater<int>());
+         
+         return a[2];
+      }
+    }
+};
