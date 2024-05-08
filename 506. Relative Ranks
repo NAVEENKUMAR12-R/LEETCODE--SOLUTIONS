@@ -1,0 +1,14 @@
+def findRelativeRanks(score):
+    sorted_score = sorted(enumerate(score), key=lambda x: x[1], reverse=True)
+    answer = [''] * len(score)
+    for i, (index, _) in enumerate(sorted_score):
+        if i == 0:
+            answer[index] = "Gold Medal"
+        elif i == 1:
+            answer[index] = "Silver Medal"
+        elif i == 2:
+            answer[index] = "Bronze Medal"
+        else:
+            answer[index] = str(i + 1)
+    return answer
+
