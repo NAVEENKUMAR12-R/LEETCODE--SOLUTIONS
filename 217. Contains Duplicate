@@ -1,0 +1,12 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) 
+    {
+     set<int>a(nums.begin(),nums.end());
+        //if(nums.size()==a.size()) return false;
+        //return true;
+        sort(nums.begin(),nums.end());
+        vector<int>b(a.begin(),a.end());
+        return nums!=b;
+    }
+};
