@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int repeatedNTimes(vector<int>& nums) 
+    {
+       int a=nums.size()/2;
+       for(int i:nums)
+       {
+           int c=count(nums.begin(),nums.end(),i);
+           if(c==a) return i;
+       }    
+       return -1;
+    }
+};
