@@ -1,0 +1,16 @@
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums)
+    {
+       set<int>a;
+    
+       for(int i:nums)
+       {
+           if(count(nums.begin(),nums.end(),i)>nums.size()/3)
+           a.insert(i);
+       }
+       vector<int>ans(a.begin(),a.end());
+       return ans;
+
+    }
+};
