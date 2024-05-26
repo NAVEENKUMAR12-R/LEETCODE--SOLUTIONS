@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int duplicateNumbersXOR(vector<int>& nums) 
+    {  int c=0;
+      set<int>b(nums.begin(),nums.end());
+        vector<int>a;
+        for(int i:b)
+        {
+            int c=count(nums.begin(),nums.end(),i);
+            if(c==2)
+                a.push_back(i);
+        }
+        if(a.size()!=0)
+        {
+         for(int i :a)
+        {
+            c^=i;
+        }    
+        }
+        return c;
+       
+    }
+};
