@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<int> sortArrayByParity(vector<int>& nums)
+     {
+      vector<int>a;
+     // vector<int>b;
+      for(int i:nums)
+      {
+        if(i%2==0)
+        {
+            a.push_back(i);
+        }
+      }    
+      for(int j:nums)
+      {
+        if(j%2==1)
+        a.push_back(j);
+      }
+     // a.insert(a.begin(),b.begin(),b.end());
+      return a;
+    }
+};
